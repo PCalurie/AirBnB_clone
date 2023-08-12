@@ -1,6 +1,6 @@
 # 0x00. AirBnB clone - The console
 
-![python](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2018/6/65f4a1dd9c51265f49d0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230811%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230811T125237Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=0390ee72fda8eff905930f53aabf83d5fa1d661863ce30bd57dc07146ec873b8)
+![python](https://media.istockphoto.com/id/1045287634/photo/airbnb-amazon-ebay-news-and-other-apps-on-iphone-screen.jpg?s=612x612&w=0&k=20&c=f0e0WqGf9KZ12Cxg-Eg383aKuzbyamYsJWrkchWQ75w=)
 
 This is part of a bigger pie of the [AirBnb](https://www.airbnb.com/) application that links travelers with airbnbs of their taste and choice.
 This is the first part of the AirBnB clone project where we worked on the backend of the project whiles interfacing it with a console application with the help of the cmd module in python.
@@ -35,3 +35,13 @@ Data (python objects) generated are stored in a json file and can be accessed wi
 	- it imports *FileStorage* of the serialized data as objects
 	- assignes storage variable to the instance created by FileStorage
 	- reloads data from the file and stores it into the apps memory
+
+- `console.py`
+	- This is a command line intepreter file suitable for easier debugging and better understanding of how the programme works
+	- create: Creates a new instance of BaseModel, saves it (to the JSON file) and prints the id
+	- show: Prints the string representation of an instance based on the class name and id.
+	- destroy: Deletes an instance based on the class name and id
+	- all: Prints all string representation of all instances based or not on the class name.
+	- update: Updates an instance based on the class name and id by adding or updating attribute
+
+![python](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2018/6/815046647d23428a14ca.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230812%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230812T101323Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=7721839cc7d9bc131240e215f6df3891abcb5c37bbe55e60aa9d1df55d9841b3)
