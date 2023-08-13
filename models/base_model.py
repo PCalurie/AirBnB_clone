@@ -12,24 +12,39 @@ class BaseModel:
 
     Attributes:
         id (str): The unique identifier of the instance.
-        created_at (datetime): The datetime when the instance was created.
-        updated_at (datetime): The datetime when the instance was last updated.
+        created_at (datetime): datetime when the instance was last created.
+        updated_at (datetime): datetime when the instance was last updated.
     """
     def __init__(self, *args, **kwargs):
+        """
+    Initializes a new instance of the class.
+
+    Args:
+        *args: Variable positional arguments (not used).
+        **kwargs: Keyword arguments to initialize instance attributes.
+            '__class__' key is ignored. 'created_at' and 'updated_at'
+            keys are parsed as datetime objects, other keys are assigned
+            their corresponding values.
+
+    Attributes:
+        id (str): Unique identifier for the instance.
+        created_at (datetime): Timestamp rep the instance's creation time.
+        updated_at (datetime): Timestamp rep the instance's update time.
+        Other instance attributes set using **kwargs.
+
+    """
         self.id = str(uuid.uuid4())
         self.created_at = datetime.now()
         self.updated_at = datetime.now()
         if kwargs:
             for key, value in kwargs.items():
-                """
                 if key == '__class__':
                     continue
-                    """
                 format_string = '%Y-%m-%dT%H:%M:%S.%f'
                 if key == 'updated_at' or key == 'created_at':
-                    self.__dict__[key] = datetime.strptime(value, format_string)
+                    setattr(self, key, datetime.strptime(value, format_string))
                 else:
-                    self.__dict__[key] = value
+                    setattr(self, key, value)
         else:
             models.storage.new(self)
 
