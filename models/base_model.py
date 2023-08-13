@@ -47,9 +47,9 @@ class BaseModel:
             dict: A dictionary containing the instance attributes.
         """
         data = self.__dict__.copy()
-        data['__class__'] = self.__class__.__name__
         data['created_at'] = self.created_at.isoformat()
         data['updated_at'] = self.updated_at.isoformat()
+        data['__class__'] = self.__class__.__name__
         return data
 
     def __str__(self):
