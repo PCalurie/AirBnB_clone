@@ -25,9 +25,9 @@ class BaseModel:
                     continue
                 format_string = '%Y-%m-%dT%H:%M:%S.%f'
                 if key == 'updated_at' or key == 'created_at':
-                    self.__dict__[key] = datetime.strptime(value, format_string)
+                    setattr(self, key, datetime.strptime(value, format_string))
                 else:
-                    self.__dict__[key] = value
+                    setattr(self, key, value)
         else:
             models.storage.new(self)
 
