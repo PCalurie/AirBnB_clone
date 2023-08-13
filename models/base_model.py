@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" Define the BaseModel"""
 
 import uuid
 from datetime import datetime
