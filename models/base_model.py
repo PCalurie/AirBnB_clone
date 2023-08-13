@@ -21,8 +21,10 @@ class BaseModel:
         self.updated_at = datetime.now()
         if kwargs:
             for key, value in kwargs.items():
+                """
                 if key == '__class__':
                     continue
+                    """
                 format_string = '%Y-%m-%dT%H:%M:%S.%f'
                 if key == 'updated_at' or key == 'created_at':
                     self.__dict__[key] = datetime.strptime(value, format_string)
