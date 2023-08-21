@@ -1,7 +1,7 @@
 .places h1 {
     font-size: 30px;
     margin-bottom: -3%;
-    margin-top: 0    
+    margin-top: 0;
 }
 
 .places_name {
@@ -32,27 +32,23 @@ article h2 {
 }
 
 .sep {
-    margin-bottom: 1px;
-    padding-bottom: 1px;
+    margin-bottom: 2px;
+    padding-bottom: 2px;
     border-bottom: 1px solid #ccc; 
 }
 
 .My_price {
     display: flex;
     align-items: center;
-
 }
 .Title {
     flex: 1;
     font-size: 24px;
     margin: 0;
 }
-.price_by_night {
+.price_circle {
     width: 60px;
     height: 60px;
-    color: #FF5A5F;
-    border:#FF5A5F 4px rounded;
-    min-width: 60px;
     background-color: white;
     border-radius: 50%;
     display: flex;
@@ -60,12 +56,6 @@ article h2 {
     align-items: center;
     margin-left: 10px;
     border: 4px solid #ff6600;
-    font-size: 30px;
-}
-.infomation {
-    height: 80px;
-    border-bottom: #DDDDDD 1px;
-    
 }
 .price {
     font-size: 20px;
@@ -106,20 +96,19 @@ article h2 {
 .content {
     display: flex;
 }
-.max_guest,
-.number_rooms,
-.number_bathrooms {
-    flex-grow: 1;
-    width: 100px;     
+.Guests_num,
+.room_number,
+.Bathrooms_number {
+    flex-grow: 1;     
 }
-.user {
+.User {
     font-size: 14px;
     color: #484848;
     text-align: left;
     margin-top: 15px;
 }
 
-.description {
+.Description {
     font-size: 14px;
     text-align: left;
     margin-top: 7px;
