@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>AirBnb Clone</title>
+        <link rel="stylesheet" href="styles/4-common.css">
+        <link rel="stylesheet" href="styles/3-header.css">
+        <link rel="stylesheet" href="styles/3-footer.css">
+        <link rel="stylesheet" href="styles/6-filters.css">
+        <link rel="stylesheet" href="styles/8-places.css">
+        <link rel="icon" href="images/icon.png">
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="logo"></div>
+        </header>
+        <div class="container">
+            <section class="filters">
+                <button type="button">Search</button>
+                <div class="locations">
+                    <h3>states</h3>
+                    <h4>California, Arizona...</h4>
+                    <ul class="popover">
+                        <li><h2>Arizona:</h2></li>
+                        <li>
+                            <ul class="p_list">
+                                <li>Page</li>
+                                <li>Page2</li>
+                            </ul>
+                        </li>
+                        <li><h2>California:</h2></li>
+                        <li>
+                            <ul class="p_list">
+                                <li>San Francisco</li>
+                                <li>Los Altos</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="amenities">
+                    <h3>Amenities</h3>
+                    <h4>Internet, Kitchen...</h4>
+                    <ul class="popover">
+                        <li>Internet</li>
+                        <li>Tv</li>
+                        <li>Kitchen</li>
+                        <li>Iron</li>
+                    </ul>
+                </div>
+            </section> 
+            <section class="places">
+                <div class="places_name">
+                    <h1>Places</h1>
+                </div>
+                <div class="handle_articles">
+                    <article>
+                        <section class="sep">
+                        <div class="My_price">
+                            <div class="Title"><h2>My Home<h2></div>
+                            <div class="price_circle">
+                                <div class="price">$80</div>                               
+                            </div>
+                        </div>
+                        </section>                                                                    
+                        <div class="info">
+                            <div class="icons">
+                            <div class="guest_icon"></div>
+                            <div class="rooms_icon"></div>
+                            <div class="Bathrooms_icon"></div>
+                            </div>
+                            <div class="icon_content">
+                            <div class="content">
+                            <div class="Guests_num"><h4>2 Guests</h4></div>
+                            <div class="room_number"><h4>1 Bedroom</h4></div>                                                     
+                            <div class="Bathrooms_number"><h4>1 Bathroom</h4></div>
+                            </div>                        
+                            <div class="User"> <b>Owner:</b>John Lennon</b></div>
+                            <div class="Description">This is a lovely 1 bedroom and 1 bathroom apartment than can
+                                accomodate 2 people. It locates at center of Shangai
+                                and next to subway line 1, 1 stop to People Square, 2 stops to
+                                Bund, 3 stops to Jingan Temple.</div>
+                        </div>
+                    </article>
+                    <article>        
+                            <section class="sep">
+                            <div class="My_price">
+                                <div class="Title"><h2>Tiny house<h2></div>
+                                <div class="price_circle">
+                                    <div class="price">$65</div>                               
+                                </div>
+                            </div>
+                            </section>                                                                    
+                            <div class="info">
+                                <div class="icons">
+                                <div class="guest_icon"></div>
+                                <div class="rooms_icon"></div>
+                                <div class="Bathrooms_icon"></div>
+                                </div>
+                                <div class="icon_content">
+                                <div class="content">
+                                <div class="Guests_num"><h4>4 Guests</h4></div>
+                                <div class="room_number"><h4>2 Bedroom</h4></div>                                                     
+                                <div class="Bathrooms_number"><h4>1 Bathroom</h4></div>
+                                </div>                        
+                                <div class="User"> <b>Owner:</b>John Lennon</b></div>
+                                <div class="Description">Our place is a private, affordable stand-alone guest house
+                                    centrally located just minutes to French Quarters, downtown,
+                                    The Fair Groundz(Jazz Fest) and City Park. The guest house is
+                                    a quaint, 400 square ft. with a full bath, mini kitchen, & living
+                                    room. The extra high cellings make the home feel more
+                                    spacious. The sofa converts to a bed also. We have a hand
+                                    made counter area that adds character to the room and a
+                                    great porch/deck to relax on and have a glass of Merlot.
+                                </div>
+                            </div>
+                        </article>                    
+                    <article>                                
+                            <section class="sep">
+                            <div class="My_price">
+                                <div class="Title"><h2>A suite<h2></div>
+                                <div class="price_circle">
+                                    <div class="price">$190</div>                               
+                                </div>
+                            </div>
+                            </section>                                                                    
+                            <div class="info">
+                                <div class="icons">
+                                <div class="guest_icon"></div>
+                                <div class="rooms_icon"></div>
+                                <div class="Bathrooms_icon"></div>
+                                </div>
+                                <div class="icon_content">
+                                <div class="content">
+                                <div class="Guests_num"><h4>2 Guests</h4></div>
+                                <div class="room_number"><h4>1 Bedroom</h4></div>                                                     
+                                <div class="Bathrooms_number"><h4>1 Bathroom</h4></div>
+                                </div>                        
+                                <div class="User"><b>Owner:</b> Ayomide Suara</b></div>
+                                <div class="Description">
+                                    Contrary to popular belief,
+                                    Lorem Ipsum is not simply random text.
+                                    It has roots in a piece of classical Latin literature from 45 BC,
+                                    making it over 2000 years old. Richard McClintock,
+                                    a Latin professor at Hampden-Sydney College in Virginia,
+                                    looked up one of the more obscure Latin words, consectetur,
+                                    from a Lorem Ipsum passage, and going through the cites of the word in classical literature,
+                                    discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of
+                                    "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.
+                                    This book is a treatise on the theory of ethics,
+                                    very popular during the Renaissance. The first line of Lorem Ipsum,
+                                    "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                                </div>
+                            </div>                                            
+                    </article>
+                </div>
+            </section>          
+        </div>
+        <footer>
+            Best School
+        </footer>
+    </body>
+</html>

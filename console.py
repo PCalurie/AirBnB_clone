@@ -1,27 +1,32 @@
 #!/usr/bin/env python3
 """Module for the command interpreter"""
 import cmd
-import uuid
-from datetime import datetime
 from models import storage
 from models.base_model import BaseModel
 import shlex
 from models.user import User
-
+from models.state import State
+from models.city import City
+from models.place import Place
+from models.amenity import Amenity
+from models.review import Review
 
 def parse(command_input):
+    """
+    Parse the command input using shlex.split().
+
+    Args:
+        command_input (str): The input command to be parsed.
+
+    Returns:
+        list: A list of parsed arguments extracted from the command input,
+              or an empty list if parsing fails.
+    """
     try:
         args = shlex.split(command_input)
         return args
     except ValueError:
         return []
-
-
-class BaseModel:
-    def __init__(self):
-        self.id = str(uuid.uuid4())
-        self.created_at = datetime.now()
-        self.updated_at = datetime.now()
 
 
 class HBNBCommand(cmd.Cmd):
@@ -47,18 +52,16 @@ class HBNBCommand(cmd.Cmd):
         return True
 
     def do_create(self, arg):
-        """Create a new instance of BaseModel"""
-        args = parse(arg)
-        error_messages = {
-            0: "** class name missing **",
-            1: "** class doesn't exist **",
-        }
-
-        if len(args) < 1 or args[0] not in HBNBCommand.__classes:
-            print(error_messages.get(len(args), "** no instance found **"))
+        """
+        Create a new class instance and print its id.
+        """
+        arg_list = parse(arg)
+        if len(arg_list) == 0:
+            print("** class name missing **")
+        elif arg_list[0] not in HBNBCommand.__classes:
+            print("** class doesn't exist **")
         else:
-            new_instance = eval(args[0])()
-            print(new_instance.id)
+            print(eval(arg_list[0])().id)
             storage.save()
 
     def do_show(self, arg):
@@ -85,7 +88,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
         elif len(args) == 1:
             print("** instance id missing **")
-        elif "{}.{}".format(args[0], argl[1]) not in obj_dict.keys():
+        elif "{}.{}".format(args[0], args[1]) not in obj_dict.keys():
             print("** no instance found **")
         else:
             del obj_dict["{}.{}".format(args[0], args[1])]
